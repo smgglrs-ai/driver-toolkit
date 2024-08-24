@@ -6,7 +6,7 @@ else ifeq ($(DISTRO), centos)
 	BASE_IMAGE = quay.io/centos/centos:stream9
 	BOOTC_IMAGE = quay.io/centos-bootc/centos-bootc:stream9
 	CENTOS_COMPOSE = $(shell skopeo inspect --format json docker://${BOOTC_IMAGE} | jq -r '.Labels["redhat.compose-id"]')
-else ifeq ($(DISTRO), redhat)
+else ifeq ($(DISTRO), rhel)
 	BASE_IMAGE = registry.redhat.io/ubi9/ubi:9.4
 	BOOTC_IMAGE = registry.redhat.io/rhel9/rhel-bootc:9.4
 	EXTRA_LABELS = --label=com.redhat.component=driver-toolkit

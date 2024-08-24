@@ -39,7 +39,8 @@ RUN if test -z "${KERNEL_VERSION}" ; then \
         diffutils \
         elfutils-libelf-devel \
         jq \
-        kabi-dw kernel-abi-stablelists \
+        kabi-dw \
+        kernel-abi-stablelists \
         keyutils \
         kmod \
         gcc-${GCC_VERSION} \
